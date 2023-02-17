@@ -37,7 +37,10 @@ def deleteTask():
         listbox.delete(ANCHOR)
 
 def clearallTask():
+    global task_list
     listbox.delete(0,END)
+    with open("tasklist.txt", 'w') as file:
+        pass
 
 def openTaskFile():
     try:
